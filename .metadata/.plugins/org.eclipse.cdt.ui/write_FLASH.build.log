@@ -1,0 +1,34 @@
+23:18:00 **** Build of configuration Debug for project write_FLASH ****
+make -r -j4 all 
+Building file: ../src/driver_spiflash.c
+Building file: ../src/lib_ENS_II1_lcd.c
+Building file: ../src/write_FLASH.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\write_FLASH\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\write_FLASH\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lib_ENS_II1_lcd.d" -MT"src/lib_ENS_II1_lcd.o" -MT"src/lib_ENS_II1_lcd.d" -o "src/lib_ENS_II1_lcd.o" "../src/lib_ENS_II1_lcd.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\write_FLASH\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/write_FLASH.d" -MT"src/write_FLASH.o" -MT"src/write_FLASH.d" -o "src/write_FLASH.o" "../src/write_FLASH.c"
+Finished building: ../src/lib_ENS_II1_lcd.c
+ 
+Finished building: ../src/driver_spiflash.c
+ 
+Finished building: ../src/write_FLASH.c
+ 
+Building target: write_FLASH.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="write_FLASH.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "write_FLASH.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/write_FLASH.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        5228 B      32640 B     16.02%
+         RamLoc4:         856 B         4 KB     20.90%
+Finished building target: write_FLASH.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "write_FLASH.axf"; # arm-none-eabi-objcopy -v -O binary "write_FLASH.axf" "write_FLASH.bin" ; # checksum -p LPC804 -d "write_FLASH.bin";
+   text	   data	    bss	    dec	    hex	filename
+   5228	      0	    856	   6084	   17c4	write_FLASH.axf
+ 
+
+23:18:01 Build Finished. 0 errors, 0 warnings. (took 788ms)
+

@@ -1,0 +1,551 @@
+22:57:35 **** Clean-only build of configuration flash for project peripherals_lib ****
+make -r clean 
+rm -rf  ./src/gpio.o ./src/i2c.o ./src/plu.o ./src/spi.o ./src/swm.o ./src/syscon.o  ./src/gpio.d ./src/i2c.d ./src/plu.d ./src/spi.d ./src/swm.d ./src/syscon.d  libperipherals_lib.a
+ 
+22:57:36 **** Clean-only build of configuration flash for project utilities_lib ****
+make -r clean 
+rm -rf  ./src/FlashPrg.o ./src/utilities.o  ./src/FlashPrg.d ./src/utilities.d  libutilities_lib.a
+ 
+22:57:36 **** Clean-only build of configuration Debug for project post_it ****
+make -r -j4 clean 
+rm -rf  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/post_it.o  ./src/cr_startup_lpc80x.d ./src/crp.d ./src/driver_spiflash.d ./src/lib_ENS_II1_lcd.d ./src/post_it.d  post_it.axf
+ 
+22:59:31 **** Cleaning Selected Files of configuration Debug for project post_it ****
+Info: Internal Builder is used for build
+Nothing to clean.
+23:00:20 **** Building Selected Files of configuration Debug for project post_it ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 "-ID:\\ENS\\Formation\\2_An\\M1_E3A\\S1\\441_Info_indus\\Projet\\mcux\\utilities_lib" "-ID:\\ENS\\Formation\\2_An\\M1_E3A\\S1\\441_Info_indus\\Projet\\mcux\\peripherals_lib" "-ID:\\ENS\\Formation\\2_An\\M1_E3A\\S1\\441_Info_indus\\Projet\\mcux\\post_it\\inc" "-ID:\\ENS\\Formation\\2_An\\M1_E3A\\S1\\441_Info_indus\\Projet\\mcux\\common\\inc" "-ID:\\ENS\\Formation\\2_An\\M1_E3A\\S1\\441_Info_indus\\Projet\\mcux\\peripherals_lib\\inc" "-ID:\\ENS\\Formation\\2_An\\M1_E3A\\S1\\441_Info_indus\\Projet\\mcux\\utilities_lib\\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map=../$(@D)/=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -o "src\\post_it.o" "..\\src\\post_it.c" 
+..\src\post_it.c: In function 'SysTick_Handler':
+..\src\post_it.c:194:6: warning: implicit declaration of function 'data2dac' [-Wimplicit-function-declaration]
+  194 |      data2dac();
+      |      ^~~~~~~~
+..\src\post_it.c:167:11: warning: unused variable 'temp' [-Wunused-variable]
+  167 |  uint32_t temp = SysTick->CTRL;
+      |           ^~~~
+..\src\post_it.c: At top level:
+..\src\post_it.c:241:6: warning: conflicting types for 'data2dac'
+  241 | void data2dac(void)
+      |      ^~~~~~~~
+..\src\post_it.c:194:6: note: previous implicit declaration of 'data2dac' was here
+  194 |      data2dac();
+      |      ^~~~~~~~
+
+**** Build of configuration flash for project common ****
+
+Nothing to build for project common
+23:17:47 **** Build of configuration flash for project peripherals_lib ****
+make -r all 
+Building file: ../src/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -MT"src/gpio.d" -o "src/gpio.o" "../src/gpio.c"
+Finished building: ../src/gpio.c
+ 
+Building file: ../src/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -MT"src/i2c.d" -o "src/i2c.o" "../src/i2c.c"
+Finished building: ../src/i2c.c
+ 
+Building file: ../src/plu.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/plu.d" -MT"src/plu.o" -MT"src/plu.d" -o "src/plu.o" "../src/plu.c"
+In file included from ../src/plu.c:34:
+D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc/plu.h:20: warning: ignoring #pragma anon_unions  [-Wunknown-pragmas]
+   20 | #pragma anon_unions
+      | 
+Finished building: ../src/plu.c
+ 
+Building file: ../src/spi.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/spi.d" -MT"src/spi.o" -MT"src/spi.d" -o "src/spi.o" "../src/spi.c"
+../src/spi.c: In function 'SPImasterWriteOnly':
+../src/spi.c:43:20: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   43 |  volatile uint32_t temp;
+      |                    ^~~~
+Finished building: ../src/spi.c
+ 
+Building file: ../src/swm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/swm.d" -MT"src/swm.o" -MT"src/swm.d" -o "src/swm.o" "../src/swm.c"
+Finished building: ../src/swm.c
+ 
+Building file: ../src/syscon.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/syscon.d" -MT"src/syscon.o" -MT"src/syscon.d" -o "src/syscon.o" "../src/syscon.c"
+Finished building: ../src/syscon.c
+ 
+Building target: libperipherals_lib.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libperipherals_lib.a"  ./src/gpio.o ./src/i2c.o ./src/plu.o ./src/spi.o ./src/swm.o ./src/syscon.o   
+arm-none-eabi-ar: creating libperipherals_lib.a
+Finished building target: libperipherals_lib.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libperipherals_lib.a" ; # arm-none-eabi-objdump -h -S "libperipherals_lib.a" >"libperipherals_lib.lss"
+   text	   data	    bss	    dec	    hex	filename
+    278	      0	      0	    278	    116	gpio.o (ex libperipherals_lib.a)
+    540	      0	      0	    540	    21c	i2c.o (ex libperipherals_lib.a)
+    140	      0	      0	    140	     8c	plu.o (ex libperipherals_lib.a)
+    784	      0	      8	    792	    318	spi.o (ex libperipherals_lib.a)
+    276	      0	      0	    276	    114	swm.o (ex libperipherals_lib.a)
+    332	      0	      0	    332	    14c	syscon.o (ex libperipherals_lib.a)
+ 
+23:17:50 **** Build of configuration flash for project utilities_lib ****
+make -r all 
+Building file: ../src/FlashPrg.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/FlashPrg.d" -MT"src/FlashPrg.o" -MT"src/FlashPrg.d" -o "src/FlashPrg.o" "../src/FlashPrg.c"
+Finished building: ../src/FlashPrg.c
+ 
+Building file: ../src/utilities.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -DCORE_M0PLUS -DCR_INTEGER_PRINTF -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/utilities.d" -MT"src/utilities.o" -MT"src/utilities.d" -o "src/utilities.o" "../src/utilities.c"
+Finished building: ../src/utilities.c
+ 
+Building target: libutilities_lib.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libutilities_lib.a"  ./src/FlashPrg.o ./src/utilities.o   
+arm-none-eabi-ar: creating libutilities_lib.a
+Finished building target: libutilities_lib.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libutilities_lib.a" ; # arm-none-eabi-objdump -h -S "libutilities_lib.a" >"libutilities_lib.lss"
+   text	   data	    bss	    dec	    hex	filename
+   1056	      0	     40	   1096	    448	FlashPrg.o (ex libutilities_lib.a)
+   1329	      0	      0	   1329	    531	utilities.o (ex libutilities_lib.a)
+ 
+23:17:50 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:17:51 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:17:52 **** Build of configuration Debug for project read_flash ****
+make -r -j4 all 
+Building file: ../src/driver_spiflash.c
+Building file: ../src/lib_ENS_II1_lcd.c
+Building file: ../src/read_flash.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\read_flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\read_flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lib_ENS_II1_lcd.d" -MT"src/lib_ENS_II1_lcd.o" -MT"src/lib_ENS_II1_lcd.d" -o "src/lib_ENS_II1_lcd.o" "../src/lib_ENS_II1_lcd.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\read_flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/read_flash.d" -MT"src/read_flash.o" -MT"src/read_flash.d" -o "src/read_flash.o" "../src/read_flash.c"
+../src/read_flash.c: In function 'SysTick_Handler':
+../src/read_flash.c:91:11: warning: unused variable 'temp' [-Wunused-variable]
+   91 |  uint32_t temp = SysTick->CTRL;
+      |           ^~~~
+../src/read_flash.c: In function 'main':
+../src/read_flash.c:216:10: warning: unused variable 'bp2_old' [-Wunused-variable]
+  216 |  uint8_t bp2_old = 1;
+      |          ^~~~~~~
+../src/read_flash.c:215:10: warning: unused variable 'bp2' [-Wunused-variable]
+  215 |  uint8_t bp2 = 1;
+      |          ^~~
+Finished building: ../src/lib_ENS_II1_lcd.c
+ 
+Finished building: ../src/driver_spiflash.c
+Finished building: ../src/read_flash.c
+ 
+ 
+Building target: read_flash.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="read_flash.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "read_flash.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/read_flash.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        5364 B      32640 B     16.43%
+         RamLoc4:        1252 B         4 KB     30.57%
+Finished building target: read_flash.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "read_flash.axf"; # arm-none-eabi-objcopy -v -O binary "read_flash.axf" "read_flash.bin" ; # checksum -p LPC804 -d "read_flash.bin";
+   text	   data	    bss	    dec	    hex	filename
+   5364	      0	   1252	   6616	   19d8	read_flash.axf
+ 
+23:17:53 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:17:53 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:17:53 **** Build of configuration Debug for project post_it ****
+make -r -j4 all 
+Building file: ../src/crp.c
+Building file: ../src/cr_startup_lpc80x.c
+Building file: ../src/aeabi_romdiv_patch.s
+Building file: ../src/driver_spiflash.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+Invoking: MCU Assembler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc80x.d" -MT"src/cr_startup_lpc80x.o" -MT"src/cr_startup_lpc80x.d" -o "src/cr_startup_lpc80x.o" "../src/cr_startup_lpc80x.c"
+arm-none-eabi-gcc -c -x assembler-with-cpp -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -g3 -mcpu=cortex-m0 -mthumb -specs=redlib.specs -o "src/aeabi_romdiv_patch.o" "../src/aeabi_romdiv_patch.s"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+Finished building: ../src/aeabi_romdiv_patch.s
+Finished building: ../src/crp.c
+ 
+ 
+Finished building: ../src/driver_spiflash.c
+Building file: ../src/lib_ENS_II1_lcd.c
+Building file: ../src/post_it.c
+ 
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lib_ENS_II1_lcd.d" -MT"src/lib_ENS_II1_lcd.o" -MT"src/lib_ENS_II1_lcd.d" -o "src/lib_ENS_II1_lcd.o" "../src/lib_ENS_II1_lcd.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/post_it.d" -MT"src/post_it.o" -MT"src/post_it.d" -o "src/post_it.o" "../src/post_it.c"
+../src/post_it.c: In function 'SysTick_Handler':
+../src/post_it.c:173:11: warning: unused variable 'temp' [-Wunused-variable]
+  173 |  uint32_t temp = SysTick->CTRL;
+      |           ^~~~
+Finished building: ../src/cr_startup_lpc80x.c
+ 
+Finished building: ../src/lib_ENS_II1_lcd.c
+ 
+Finished building: ../src/post_it.c
+ 
+Building target: post_it.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="post_it.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "post_it.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/post_it.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        6568 B      32640 B     20.12%
+         RamLoc4:        1252 B         4 KB     30.57%
+Finished building target: post_it.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "post_it.axf"; # arm-none-eabi-objcopy -v -O binary "post_it.axf" "post_it.bin" ; # checksum -p LPC804 -d "post_it.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6568	      0	   1252	   7820	   1e8c	post_it.axf
+ 
+23:17:54 **** Build of configuration flash for project periph_plu_macro ****
+make -r -j4 all 
+Building file: ../src/plu_macro.c
+Building file: ../src/system.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\periph_plu_macro\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/plu_macro.d" -MT"src/plu_macro.o" -MT"src/plu_macro.d" -o "src/plu_macro.o" "../src/plu_macro.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\periph_plu_macro\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+In file included from ../src/plu_macro.c:38:
+D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc/plu.h:20: warning: ignoring #pragma anon_unions  [-Wunknown-pragmas]
+   20 | #pragma anon_unions
+      | 
+Finished building: ../src/plu_macro.c
+ 
+Finished building: ../src/system.c
+ 
+Building target: periph_plu_macro.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -Xlinker -Map="periph_plu_macro.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "periph_plu_macro_macro_flash.ld" -o "periph_plu_macro.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/plu_macro.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        4544 B      32640 B     13.92%
+         RamLoc4:         204 B         4 KB      4.98%
+Finished building target: periph_plu_macro.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_plu_macro.axf"; # arm-none-eabi-objcopy -v -O binary "periph_plu_macro.axf" "periph_plu_macro.bin" ; # checksum -p LPC804 -d "periph_plu_macro.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4524	     20	    184	   4728	   1278	periph_plu_macro.axf
+ 
+23:17:55 **** Build of configuration flash for project periph_plu ****
+make -r -j4 all 
+Building file: ../src/plutest.c
+Building file: ../src/system.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\periph_plu\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/plutest.d" -MT"src/plutest.o" -MT"src/plutest.d" -o "src/plutest.o" "../src/plutest.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\periph_plu\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+In file included from ../src/plutest.c:37:
+D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc/plu.h:20: warning: ignoring #pragma anon_unions  [-Wunknown-pragmas]
+   20 | #pragma anon_unions
+      | 
+Finished building: ../src/plutest.c
+Finished building: ../src/system.c
+ 
+ 
+Building target: periph_plu.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -Xlinker -Map="periph_plu.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "periph_plu_flash.ld" -o "periph_plu.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/plutest.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        4544 B      32640 B     13.92%
+         RamLoc4:         204 B         4 KB      4.98%
+Finished building target: periph_plu.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_plu.axf"; # arm-none-eabi-objcopy -v -O binary "periph_plu.axf" "periph_plu.bin" ; # checksum -p LPC804 -d "periph_plu.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4524	     20	    184	   4728	   1278	periph_plu.axf
+ 
+23:17:57 **** Build of configuration flash for project SPI_Wakeup_Slave ****
+make -r -j4 all 
+Building file: ../src/SPI_Slave.c
+Building file: ../src/Serial.c
+Building file: ../src/system.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Wakeup_Slave\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/SPI_Slave.d" -MT"src/SPI_Slave.o" -MT"src/SPI_Slave.d" -o "src/SPI_Slave.o" "../src/SPI_Slave.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Wakeup_Slave\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -MT"src/Serial.d" -o "src/Serial.o" "../src/Serial.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Wakeup_Slave\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+Finished building: ../src/SPI_Slave.c
+ 
+Finished building: ../src/system.c
+Finished building: ../src/Serial.c
+ 
+ 
+Building target: SPI_Wakeup_Slave.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -Xlinker -Map="SPI_Wakeup_Slave.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "USART_Wakeup_Master_flash.ld" -o "SPI_Wakeup_Slave.axf"  ./src/MCUXpresso_Retarget.o ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/SPI_Slave.o ./src/Serial.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        3940 B      32640 B     12.07%
+         RamLoc4:         208 B         4 KB      5.08%
+Finished building target: SPI_Wakeup_Slave.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SPI_Wakeup_Slave.axf"; # arm-none-eabi-objcopy -v -O binary "SPI_Wakeup_Slave.axf" "SPI_Wakeup_Slave.bin" ; # checksum -p LPC804 -d "SPI_Wakeup_Slave.bin";
+   text	   data	    bss	    dec	    hex	filename
+   3920	     20	    188	   4128	   1020	SPI_Wakeup_Slave.axf
+ 
+23:17:58 **** Build of configuration flash for project SPI_Wakeup_Master ****
+make -r -j4 all 
+Building file: ../src/SPI_Master.c
+Building file: ../src/Serial.c
+Building file: ../src/system.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Wakeup_Master\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/SPI_Master.d" -MT"src/SPI_Master.o" -MT"src/SPI_Master.d" -o "src/SPI_Master.o" "../src/SPI_Master.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Wakeup_Master\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Wakeup_Master\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -MT"src/Serial.d" -o "src/Serial.o" "../src/Serial.c"
+Finished building: ../src/SPI_Master.c
+ 
+Finished building: ../src/Serial.c
+Finished building: ../src/system.c
+ 
+ 
+Building target: SPI_Wakeup_Master.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -Xlinker -Map="SPI_Wakeup_Master.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "USART_Wakeup_Master_flash.ld" -o "SPI_Wakeup_Master.axf"  ./src/MCUXpresso_Retarget.o ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/SPI_Master.o ./src/Serial.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       14312 B      32640 B     43.85%
+         RamLoc4:         220 B         4 KB      5.37%
+Finished building target: SPI_Wakeup_Master.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SPI_Wakeup_Master.axf"; # arm-none-eabi-objcopy -v -O binary "SPI_Wakeup_Master.axf" "SPI_Wakeup_Master.bin" ; # checksum -p LPC804 -d "SPI_Wakeup_Master.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14284	     28	    192	  14504	   38a8	SPI_Wakeup_Master.axf
+ 
+23:17:59 **** Build of configuration flash for project SPI_Flash ****
+make -r -j4 all 
+Building file: ../src/driver_spiflash.c
+Building file: ../src/SPI_Flash.c
+Building file: ../src/system.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/SPI_Flash.d" -MT"src/SPI_Flash.o" -MT"src/SPI_Flash.d" -o "src/SPI_Flash.o" "../src/SPI_Flash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\SPI_Flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+Finished building: ../src/system.c
+Finished building: ../src/SPI_Flash.c
+ 
+ 
+Finished building: ../src/driver_spiflash.c
+ 
+Building target: SPI_Flash.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -Xlinker -Map="SPI_Flash.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "SPI_Flash_flash.ld" -o "SPI_Flash.axf"  ./src/MCUXpresso_cr_startup.o ./src/MCUXpresso_crp.o ./src/MCUXpresso_mtb.o ./src/SPI_Flash.o ./src/driver_spiflash.o ./src/system.o   -lperipherals_lib -lutilities_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        4380 B      32640 B     13.42%
+         RamLoc4:         476 B         4 KB     11.62%
+Finished building target: SPI_Flash.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SPI_Flash.axf"; # arm-none-eabi-objcopy -v -O binary "SPI_Flash.axf" "SPI_Flash.bin" ; # checksum -p LPC804 -d "SPI_Flash.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4360	     20	    456	   4836	   12e4	SPI_Flash.axf
+ 
+23:18:00 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:18:00 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:18:00 **** Build of configuration Debug for project write_FLASH ****
+make -r -j4 all 
+Building file: ../src/driver_spiflash.c
+Building file: ../src/lib_ENS_II1_lcd.c
+Building file: ../src/write_FLASH.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\write_FLASH\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\write_FLASH\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lib_ENS_II1_lcd.d" -MT"src/lib_ENS_II1_lcd.o" -MT"src/lib_ENS_II1_lcd.d" -o "src/lib_ENS_II1_lcd.o" "../src/lib_ENS_II1_lcd.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\write_FLASH\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/write_FLASH.d" -MT"src/write_FLASH.o" -MT"src/write_FLASH.d" -o "src/write_FLASH.o" "../src/write_FLASH.c"
+Finished building: ../src/lib_ENS_II1_lcd.c
+ 
+Finished building: ../src/driver_spiflash.c
+ 
+Finished building: ../src/write_FLASH.c
+ 
+Building target: write_FLASH.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="write_FLASH.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "write_FLASH.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/write_FLASH.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        5228 B      32640 B     16.02%
+         RamLoc4:         856 B         4 KB     20.90%
+Finished building target: write_FLASH.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "write_FLASH.axf"; # arm-none-eabi-objcopy -v -O binary "write_FLASH.axf" "write_FLASH.bin" ; # checksum -p LPC804 -d "write_FLASH.bin";
+   text	   data	    bss	    dec	    hex	filename
+   5228	      0	    856	   6084	   17c4	write_FLASH.axf
+ 
+15:15:33 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:15:34 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:15:34 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:15:35 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:15:37 **** Incremental Build of configuration Debug for project post_it ****
+make -r -j4 all 
+Building file: ../src/driver_spiflash.c
+Building file: ../src/post_it.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/post_it.d" -MT"src/post_it.o" -MT"src/post_it.d" -o "src/post_it.o" "../src/post_it.c"
+../src/post_it.c: In function 'SysTick_Handler':
+../src/post_it.c:172:11: warning: unused variable 'temp' [-Wunused-variable]
+  172 |  uint32_t temp = SysTick->CTRL;
+      |           ^~~~
+Finished building: ../src/driver_spiflash.c
+Finished building: ../src/post_it.c
+ 
+ 
+Building target: post_it.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="post_it.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "post_it.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/post_it.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        6580 B      32640 B     20.16%
+         RamLoc4:        1252 B         4 KB     30.57%
+Finished building target: post_it.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "post_it.axf"; # arm-none-eabi-objcopy -v -O binary "post_it.axf" "post_it.bin" ; # checksum -p LPC804 -d "post_it.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6580	      0	   1252	   7832	   1e98	post_it.axf
+ 
+15:15:43 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:15:43 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:15:44 **** Incremental Build of configuration Debug for project post_it ****
+make -r -j4 all 
+make: Nothing to be done for 'all'.
+15:17:37 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:17:38 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:17:38 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:17:38 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:17:39 **** Incremental Build of configuration Debug for project post_it ****
+make -r -j4 all 
+Building file: ../src/post_it.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/post_it.d" -MT"src/post_it.o" -MT"src/post_it.d" -o "src/post_it.o" "../src/post_it.c"
+../src/post_it.c: In function 'SysTick_Handler':
+../src/post_it.c:172:11: warning: unused variable 'temp' [-Wunused-variable]
+  172 |  uint32_t temp = SysTick->CTRL;
+      |           ^~~~
+Finished building: ../src/post_it.c
+ 
+Building target: post_it.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="post_it.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "post_it.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/post_it.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        6556 B      32640 B     20.09%
+         RamLoc4:        1252 B         4 KB     30.57%
+Finished building target: post_it.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "post_it.axf"; # arm-none-eabi-objcopy -v -O binary "post_it.axf" "post_it.bin" ; # checksum -p LPC804 -d "post_it.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6556	      0	   1252	   7808	   1e80	post_it.axf
+ 
+15:17:40 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:17:40 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:17:40 **** Incremental Build of configuration Debug for project post_it ****
+make -r -j4 all 
+make: Nothing to be done for 'all'.
+15:20:44 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:20:44 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:20:45 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:20:45 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:20:45 **** Incremental Build of configuration Debug for project post_it ****
+make -r -j4 all 
+Building file: ../src/driver_spiflash.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\post_it\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+Finished building: ../src/driver_spiflash.c
+ 
+Building target: post_it.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="post_it.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "post_it.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/post_it.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        6520 B      32640 B     19.98%
+         RamLoc4:        1252 B         4 KB     30.57%
+Finished building target: post_it.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "post_it.axf"; # arm-none-eabi-objcopy -v -O binary "post_it.axf" "post_it.bin" ; # checksum -p LPC804 -d "post_it.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6520	      0	   1252	   7772	   1e5c	post_it.axf
+ 
+15:20:47 **** Incremental Build of configuration flash for project utilities_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:20:47 **** Incremental Build of configuration flash for project peripherals_lib ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:20:47 **** Incremental Build of configuration Debug for project post_it ****
+make -r -j4 all 
+make: Nothing to be done for 'all'.

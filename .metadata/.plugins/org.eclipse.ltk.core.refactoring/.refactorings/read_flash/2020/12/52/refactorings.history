@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;read_flash/src/post_it.c&apos; to &apos;read_flash.c&apos;" description="Rename resource &apos;post_it.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/post_it.c" name="read_flash.c" stamp="1609079698262" updateReferences="true"/>
+</session>

@@ -1,0 +1,23 @@
+09:26:01 **** Incremental Build of configuration flash for project UART0_Terminal ****
+make -r -j4 all 
+Building file: ../src/UART0_Terminal.c
+Building file: ../src/system.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\UART0_Terminal\inc" -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/UART0_Terminal.d" -MT"src/UART0_Terminal.o" -MT"src/UART0_Terminal.d" -o "src/UART0_Terminal.o" "../src/UART0_Terminal.c"
+arm-none-eabi-gcc -DDEBUG -DCR_INTEGER_PRINTF -D__USE_CMSIS -D__CODE_RED -DCORE_M0PLUS -D__MTB_DISABLE -D__MTB_BUFFER_SIZE=256 -D__REDLIB__ -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\UART0_Terminal\inc" -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\utilities_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\common\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/system.d" -MT"src/system.o" -MT"src/system.d" -o "src/system.o" "../src/system.c"
+../src/system.c:24:10: fatal error: chip_setup.h: No such file or directory
+   24 | #include "chip_setup.h"
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+../src/UART0_Terminal.c:17:10: fatal error: chip_setup.h: No such file or directory
+   17 | #include "chip_setup.h"
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:32: src/system.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [src/subdir.mk:32: src/UART0_Terminal.o] Error 1
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+
+09:26:01 Build Failed. 5 errors, 0 warnings. (took 215ms)
+

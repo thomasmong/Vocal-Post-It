@@ -1,0 +1,19 @@
+09:23:24 **** Incremental Build of configuration Debug for project test_lcd ****
+make -r -j4 all 
+Building target: test_lcd.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="test_lcd.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "test_lcd.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/test_lcd.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       12816 B      32640 B     39.26%
+         RamLoc4:         212 B         4 KB      5.18%
+Finished building target: test_lcd.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "test_lcd.axf"; # arm-none-eabi-objcopy -v -O binary "test_lcd.axf" "test_lcd.bin" ; # checksum -p LPC804 -d "test_lcd.bin";
+   text	   data	    bss	    dec	    hex	filename
+  12816	      0	    212	  13028	   32e4	test_lcd.axf
+ 
+
+09:23:24 Build Finished. 0 errors, 0 warnings. (took 317ms)
+

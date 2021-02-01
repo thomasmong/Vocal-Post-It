@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;write_FLASH/src/post_it.c&apos; to &apos;write_FLASH.c&apos;" description="Rename resource &apos;post_it.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/post_it.c" name="write_FLASH.c" stamp="1608023781900" updateReferences="true"/>
+</session>

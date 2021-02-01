@@ -1,0 +1,45 @@
+23:17:52 **** Build of configuration Debug for project read_flash ****
+make -r -j4 all 
+Building file: ../src/driver_spiflash.c
+Building file: ../src/lib_ENS_II1_lcd.c
+Building file: ../src/read_flash.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\read_flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/driver_spiflash.d" -MT"src/driver_spiflash.o" -MT"src/driver_spiflash.d" -o "src/driver_spiflash.o" "../src/driver_spiflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\read_flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lib_ENS_II1_lcd.d" -MT"src/lib_ENS_II1_lcd.o" -MT"src/lib_ENS_II1_lcd.d" -o "src/lib_ENS_II1_lcd.o" "../src/lib_ENS_II1_lcd.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__LPC80X__ -D__REDLIB__ -DSDK_DEBUGCONSOLE=1 -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\read_flash\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\common\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\inc" -I"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/read_flash.d" -MT"src/read_flash.o" -MT"src/read_flash.d" -o "src/read_flash.o" "../src/read_flash.c"
+../src/read_flash.c: In function 'SysTick_Handler':
+../src/read_flash.c:91:11: warning: unused variable 'temp' [-Wunused-variable]
+   91 |  uint32_t temp = SysTick->CTRL;
+      |           ^~~~
+../src/read_flash.c: In function 'main':
+../src/read_flash.c:216:10: warning: unused variable 'bp2_old' [-Wunused-variable]
+  216 |  uint8_t bp2_old = 1;
+      |          ^~~~~~~
+../src/read_flash.c:215:10: warning: unused variable 'bp2' [-Wunused-variable]
+  215 |  uint8_t bp2 = 1;
+      |          ^~~
+Finished building: ../src/lib_ENS_II1_lcd.c
+ 
+Finished building: ../src/driver_spiflash.c
+Finished building: ../src/read_flash.c
+ 
+ 
+Building target: read_flash.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\utilities_lib\flash" -L"D:\ENS\Formation\2_An\M1_E3A\S1\441_Info_indus\Projet\mcux\peripherals_lib\flash" -Xlinker -Map="read_flash.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "post_it_Debug.ld" -o "read_flash.axf"  ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc80x.o ./src/crp.o ./src/driver_spiflash.o ./src/lib_ENS_II1_lcd.o ./src/read_flash.o   -lutilities_lib -lperipherals_lib
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        5364 B      32640 B     16.43%
+         RamLoc4:        1252 B         4 KB     30.57%
+Finished building target: read_flash.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "read_flash.axf"; # arm-none-eabi-objcopy -v -O binary "read_flash.axf" "read_flash.bin" ; # checksum -p LPC804 -d "read_flash.bin";
+   text	   data	    bss	    dec	    hex	filename
+   5364	      0	   1252	   6616	   19d8	read_flash.axf
+ 
+
+23:17:52 Build Finished. 0 errors, 3 warnings. (took 776ms)
+

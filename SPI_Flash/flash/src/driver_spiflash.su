@@ -1,0 +1,7 @@
+driver_spiflash.c:18:6:spiflash_write_enable	8	static
+driver_spiflash.c:25:6:spiflash_write_disable	8	static
+driver_spiflash.c:33:9:spiflash_check_status	8	static
+driver_spiflash.c:42:6:spiflash_chip_erase	8	static
+driver_spiflash.c:50:6:spiflash_write_data	24	static
+driver_spiflash.c:62:6:spiflash_read_data	24	static
+driver_spiflash.c:74:10:spiflash_read_id	8	static
